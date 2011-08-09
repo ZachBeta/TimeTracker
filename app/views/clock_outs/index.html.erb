@@ -1,0 +1,25 @@
+<h1>Listing clock_outs</h1>
+
+<table>
+  <tr>
+    <th>Out time</th>
+    <th>Clock in</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clock_outs.each do |clock_out| %>
+  <tr>
+    <td><%= clock_out.out_time %></td>
+    <td><%= clock_out.clock_in_id %></td>
+    <td><%= link_to 'Show', clock_out %></td>
+    <td><%= link_to 'Edit', edit_clock_out_path(clock_out) %></td>
+    <td><%= link_to 'Destroy', clock_out, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clock out', new_clock_out_path %>

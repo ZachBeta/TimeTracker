@@ -1,0 +1,25 @@
+<%= form_for(@clock_in) do |f| %>
+  <% if @clock_in.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clock_in.errors.count, "error") %> prohibited this clock_in from being saved:</h2>
+
+      <ul>
+      <% @clock_in.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :in_time %><br />
+    <%= f.datetime_select :in_time %>
+  </div>
+  <div class="field">
+    <%= f.label :task_id %><br />
+    <%= f.text_field :task_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
