@@ -1,5 +1,5 @@
 class ClockIn < ActiveRecord::Base
-  belongs_to :task
+  belongs_to :task, :dependent => :destroy
   has_one :clock_out
 end
 

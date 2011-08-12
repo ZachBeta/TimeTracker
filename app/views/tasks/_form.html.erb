@@ -15,6 +15,14 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+  <% f.fields_for :clock_ins do |builder| %>
+  <p>
+    <%= builder.label :in_time, "Clock In"%>
+    <%= builder.datetime_select :in_time %>
+    <%= builder.hidden_field :_destroy%>
+    <%= link_to_function "remove", "remove_fields(this)" %>
+  </p>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

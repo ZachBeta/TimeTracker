@@ -1,9 +1,9 @@
 TimeTracker::Application.routes.draw do
 
-  resources :tasks do
-    resources :clock_outs
-    resources :clock_ins
-  end
+  resources :tasks
+  resources :clock_outs
+  resources :clock_ins
+
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 

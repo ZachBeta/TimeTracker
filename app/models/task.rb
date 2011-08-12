@@ -1,6 +1,8 @@
 class Task < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :user, :dependent => :destroy
   has_many :clock_ins
+   
+  accepts_nested_attributes_for :clock_ins, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 end
 
 # == Schema Information

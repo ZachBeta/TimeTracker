@@ -1,5 +1,5 @@
 class ClockOut < ActiveRecord::Base
-  belongs_to :clock_in
+  belongs_to :clock_in, :dependent => :destroy
 end
 
 # == Schema Information
