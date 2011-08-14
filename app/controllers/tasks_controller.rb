@@ -80,4 +80,30 @@ class TasksController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def start
+    #close clock
+    @tasks = Task.all
+    @tasks.each do |checkclocks|
+      @openclock = checkclocks.include(:clock_outs).where('clock_in_id IS NULL')
+      if(!@openclock.null?)
+        @clock_out = @openclock.clock_outs.new
+        @clock_out.out_time = Time.now
+        @clock_out.save
+      end
+    end
+
+
+    #open clock
+    @task = Task.find(params[:task_id])
+    @clock_in = @task.clock_ins.new
+    @clock_in.in_time = Time.now
+    @clock_in.save
+
+    respond_to do |format|
+      format.html { redirect_to(@task) }
+      format.xml  { head :ok }
+    end
+  end
 end
+

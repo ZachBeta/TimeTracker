@@ -4,6 +4,9 @@
   <b>Name:</b>
   <%= @task.name %>
 </p>
+<p>
+   <p> <%= link_to 'Start', task_start_path(@task) %> </p>
+</p>
 <ol>
 <% for clock_in in @task.clock_ins %>
   <li><%=h clock_in.in_time %></li>
