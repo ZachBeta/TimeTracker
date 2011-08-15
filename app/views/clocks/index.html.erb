@@ -1,0 +1,27 @@
+<h1>Listing clocks</h1>
+
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Clock in</th>
+    <th>Clock out</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clocks.each do |clock| %>
+  <tr>
+    <td><%= clock.task_id %></td>
+    <td><%= clock.clock_in %></td>
+    <td><%= clock.clock_out %></td>
+    <td><%= link_to 'Show', clock %></td>
+    <td><%= link_to 'Edit', edit_clock_path(clock) %></td>
+    <td><%= link_to 'Destroy', clock, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clock', new_clock_path %>

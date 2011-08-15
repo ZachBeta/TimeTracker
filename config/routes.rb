@@ -1,5 +1,7 @@
 TimeTracker::Application.routes.draw do
 
+  resources :clocks
+
   resources :tasks do
     get 'start'
   end

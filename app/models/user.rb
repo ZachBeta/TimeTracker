@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
+  has_many :tasks, :dependent => :destroy
+
   attr_accessible :username, :email, :password, :password_confirmation
 
   attr_accessor :password

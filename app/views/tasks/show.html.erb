@@ -4,14 +4,12 @@
   <b>Name:</b>
   <%= @task.name %>
 </p>
-<p>
-   <p> <%= link_to 'Start', task_start_path(@task) %> </p>
-</p>
 <ol>
-<% for clock_in in @task.clock_ins %>
-  <li><%=h clock_in.in_time %></li>
+<% for clock in @task.clocks.order('clocks.clock_in DESC') %>
+  <li><%=h clock.clock_in %> - <%=h clock.clock_out %></li>
 <% end %>
 </ol>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>
+

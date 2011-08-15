@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  task_id: 1
+  clock_in: 2011-08-14 22:27:24
+  clock_out: 2011-08-14 22:27:24
+
+two:
+  task_id: 1
+  clock_in: 2011-08-14 22:27:24
+  clock_out: 2011-08-14 22:27:24
+
+# == Schema Information
+#
+# Table name: clocks
+#
+#  id         :integer         not null, primary key
+#  task_id    :integer
+#  clock_in   :datetime
+#  clock_out  :datetime
+#  created_at :datetime
+#  updated_at :datetime
+#
+

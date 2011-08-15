@@ -8,9 +8,20 @@
     <th></th>
   </tr>
 
+
+<% @tasks.each do |task| %>
+  <% unless (openclock = task.clocks.where(:clock_out => nil).first).nil? %>
+    <p><%= openclock.task.name %></p>
+    <p><%= openclock.clock_in %></p>
+  <% end %>
+<% end %>
+
+
+
 <% @tasks.each do |task| %>
   <tr>
     <td><%= task.name %></td>
+    <td><%= link_to 'Start Clock', task_start_path(task) %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -21,3 +32,4 @@
 <br />
 
 <%= link_to 'New Task', new_task_path %>
+

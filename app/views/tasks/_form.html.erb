@@ -15,11 +15,8 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-    <% f.fields_for :clock_ins do |builder| %>
-      <%= render "clock_in_fields", :f => builder %>
-    <% end %>
-   <p> <%= link_to_add_fields "Add timer", f, :clock_ins %> </p>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
