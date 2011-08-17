@@ -12,7 +12,8 @@
 <% @tasks.each do |task| %>
   <% unless (openclock = task.clocks.where(:clock_out => nil).first).nil? %>
     <p><%= openclock.task.name %></p>
-    <p><%= openclock.clock_in %></p>
+    <p><%= openclock.clock_in.getlocal.strftime("%a %v @ %T %Z") %></p>
+    <p><%=h time_diff_in_natural_language(openclock.clock_in, Time.now) %></p>
   <% end %>
 <% end %>
 

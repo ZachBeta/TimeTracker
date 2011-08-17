@@ -5,6 +5,7 @@ class Task < ActiveRecord::Base
   accepts_nested_attributes_for :clocks, :allow_destroy => true
 end
 
+
 # == Schema Information
 #
 # Table name: tasks
@@ -13,5 +14,6 @@ end
 #  name       :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  user_id    :integer
 #
 

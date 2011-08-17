@@ -2,6 +2,7 @@ class Clock < ActiveRecord::Base
   belongs_to :task
 end
 
+
 # == Schema Information
 #
 # Table name: clocks
@@ -12,5 +13,6 @@ end
 #  clock_out  :datetime
 #  created_at :datetime
 #  updated_at :datetime
+#  notes      :text
 #
 

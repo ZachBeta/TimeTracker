@@ -4,6 +4,5 @@ class HomeController < ApplicationController
       redirect_to(tasks_url)
     end
   end
-
 end
 

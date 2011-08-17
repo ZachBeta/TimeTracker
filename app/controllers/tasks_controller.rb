@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.xml
   def index
-    @tasks = Task.all
+    @tasks = current_user.tasks.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.xml
   def show
-    @task = Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   # GET /tasks/new.xml
   def new
-    @task = Task.new
+    @task = current_user.tasks.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +34,17 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
-    @task = Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
   end
 
   # POST /tasks
   # POST /tasks.xml
   def create
-    @task = Task.new(params[:task])
+    @task = current_user.tasks.new(params[:task])
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to(@task, :notice => 'Task was successfully created.') }
+        format.html { redirect_to(task_start_url(@task), :notice => 'Task was successfully created.') }
         format.xml  { render :xml => @task, :status => :created, :location => @task }
       else
         format.html { render :action => "new" }
@@ -56,7 +56,7 @@ class TasksController < ApplicationController
   # PUT /tasks/1
   # PUT /tasks/1.xml
   def update
-    @task = Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
 
     respond_to do |format|
       if @task.update_attributes(params[:task])
@@ -72,7 +72,7 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   # DELETE /tasks/1.xml
   def destroy
-    @task = Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
     @task.destroy
 
     respond_to do |format|
@@ -83,7 +83,7 @@ class TasksController < ApplicationController
 
   def start
     #close clock
-    @tasks = Task.all
+    @tasks = current_user.tasks.all
     @tasks.each do |task|
       unless(task.clocks.where(:clock_out => nil).first.nil?)
         task.clocks.where(:clock_out => nil).first.update_attribute :clock_out, Time.now
@@ -91,7 +91,7 @@ class TasksController < ApplicationController
     end
 
     #open clock
-    @task = Task.find(params[:task_id])
+    @task = current_user.tasks.find(params[:task_id])
     @clock = @task.clocks.new
     @clock.attributes = {:clock_in => Time.now, :clock_out => nil}
     @clock.save

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110815022723) do
+ActiveRecord::Schema.define(:version => 20110817031637) do
 
   create_table "clock_ins", :force => true do |t|
     t.datetime "in_time"
@@ -32,12 +32,14 @@ ActiveRecord::Schema.define(:version => 20110815022723) do
     t.datetime "clock_out"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "notes"
   end
 
   create_table "tasks", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

@@ -6,7 +6,7 @@
 </p>
 <ol>
 <% for clock in @task.clocks.order('clocks.clock_in DESC') %>
-  <li><%=h clock.clock_in %> - <%=h clock.clock_out %></li>
+  <li><%=h clock.clock_in.getlocal.strftime("%a %v @ %T %Z") %> - <%=h clock.clock_out.getlocal.strftime("%a %v @ %T %Z")%> : <%=h time_diff_in_natural_language(clock.clock_in, clock.clock_out) %></li>
 <% end %>
 </ol>
 

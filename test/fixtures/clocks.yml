@@ -10,6 +10,7 @@ two:
   clock_in: 2011-08-14 22:27:24
   clock_out: 2011-08-14 22:27:24
 
+
 # == Schema Information
 #
 # Table name: clocks
@@ -20,5 +21,6 @@ two:
 #  clock_out  :datetime
 #  created_at :datetime
 #  updated_at :datetime
+#  notes      :text
 #
 

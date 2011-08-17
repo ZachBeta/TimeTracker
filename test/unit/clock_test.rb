@@ -7,6 +7,7 @@ class ClockTest < ActiveSupport::TestCase
   end
 end
 
+
 # == Schema Information
 #
 # Table name: clocks
@@ -17,5 +18,6 @@ end
 #  clock_out  :datetime
 #  created_at :datetime
 #  updated_at :datetime
+#  notes      :text
 #
 

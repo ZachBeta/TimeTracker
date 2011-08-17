@@ -1,0 +1,164 @@
+---
+helper:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --test-framework=
+observer:
+- --test-framework=
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+model:
+- --migration
+- --timestamps
+- --parent=
+- --test-framework=
+- --fixture
+- --fixture-replacement=
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+performance_test:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --performance-tool=
+resource:
+- --migration
+- --timestamps
+- --parent=
+- --test-framework=
+- --fixture
+- --fixture-replacement=
+- --template-engine=
+- --helper
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+- --force-plural
+- --resource-controller=
+- --actions=
+scaffold:
+- --migration
+- --timestamps
+- --parent=
+- --test-framework=
+- --fixture
+- --fixture-replacement=
+- --template-engine=
+- --helper
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+- --force-plural
+- --scaffold-controller=
+- --stylesheets
+controller:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --template-engine=
+- --test-framework=
+- --helper
+scaffold_controller:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --force-plural
+- --orm=
+- --template-engine=
+- --test-framework=
+- --helper
+migration:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+generator:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --namespace
+plugin:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --tasks=
+- --generator
+- --test-framework=
+stylesheets:
+- --force
+- --pretend
+- --quiet
+- --skip
+integration_test:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --integration-tool=
+session_migration:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+nifty:layout:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --haml
+nifty:authentication:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --testunit
+- --rspec
+- --shoulda
+- --haml
+- --authlogic
+nifty:config:
+- --force
+- --pretend
+- --quiet
+- --skip
+nifty:scaffold:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --testunit
+- --rspec
+- --shoulda
+- --skip-model
+- --skip-migration
+- --skip-timestamps
+- --skip-controller
+- --invert
+- --namespace-model
+- --haml
+mailer:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --template-engine=
+- --test-framework=
