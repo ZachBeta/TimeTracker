@@ -1,5 +1,8 @@
 TimeTracker::Application.routes.draw do
 
+  root :to => "home#index"
+  get "home/index"
+
   resources :clocks
 
   resources :tasks do
@@ -79,3 +82,4 @@ TimeTracker::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+
