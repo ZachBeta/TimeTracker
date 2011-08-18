@@ -15,6 +15,7 @@
     <td><%= clock.task_id %></td>
     <td><%= clock.clock_in %></td>
     <td><%= clock.clock_out %></td>
+    <td><%= clock.note %></td>
     <td><%= link_to 'Show', clock %></td>
     <td><%= link_to 'Edit', edit_clock_path(clock) %></td>
     <td><%= link_to 'Destroy', clock, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -25,3 +26,4 @@
 <br />
 
 <%= link_to 'New Clock', new_clock_path %>
+

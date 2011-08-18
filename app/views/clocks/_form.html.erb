@@ -23,7 +23,12 @@
     <%= f.label :clock_out %><br />
     <%= f.datetime_select :clock_out %>
   </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_field :note %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
