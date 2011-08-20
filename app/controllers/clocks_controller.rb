@@ -13,7 +13,7 @@ class ClocksController < ApplicationController
   # GET /clocks/1
   # GET /clocks/1.xml
   def show
-    @clock = current_user.clocks.find(params[:id])
+    @clock = current_user.clocks.find(params[:clock_id])
 
     respond_to do |format|
       format.html # show.html.erb
