@@ -1,0 +1,187 @@
+* DONE break things then use git to rollback changes
+** start project over and then git init after learning from the mistakes of this version
+** let's not worry about that until the POC is finished <2011-08-08 Mon>
+* DONE models
+** user has many tasks
+** task has many times
+** time, check in and check out
+* DONE nifty looks
+* DONE nifty user
+* DONE user login
+* DONE create a task
+* DONE /tasks view
+  CLOCK: [2011-08-07 Sun 17:46]--[2011-08-07 Sun 18:02] =>  0:16
+  CLOCK: [2011-08-06 Sat 14:36]--[2011-08-06 Sat 14:36] =>  0:00
+  CLOCK: [2011-08-06 Sat 14:06]--[2011-08-06 Sat 14:36] =>  0:30
+** current /tasks becomes "manage your tasks"
+** /tasks/list - is clockin clockout
+** /tasks/index - manage tasks
+** /tasks/
+** new_task_subtask_path(task) will link to /tasks/36/subtasks/new at first
+   CLOCK: [2011-08-07 Sun 11:53]--[2011-08-07 Sun 12:16] =>  0:23
+** http://guides.rubyonrails.org/routing.html
+   nested resources
+   needs more research on nested resources, things are very broken
+   right now
+** DONE create a new timer and prefill the task_id
+   CLOCK: [2011-08-06 Sat 18:25]--[2011-08-06 Sat 18:44] =>  0:19
+** DONE http://railscasts.com/episodes/139-nested-resources
+* DONE revise clock model - clockin has one clockout, clockout belongs to clockin
+  CLOCK: [2011-08-09 Tue 06:46]--[2011-08-09 Tue 06:59] =>  0:13
+  CLOCK: [2011-08-09 Tue 05:35]--[2011-08-09 Tue 06:45] =>  1:10
+  CLOCK: [2011-08-08 Mon 20:06]--[2011-08-08 Mon 20:36] =>  0:30
+  CLOCK: [2011-08-08 Mon 19:11]--[2011-08-08 Mon 19:34] =>  0:23
+** DONE timer is not functioning properly clock in out sucks
+*** clock in, stays open
+*** clock out only on a new clock in
+* DONE destroy unneccessary views - all clock views besides _form
+* DONE Revisions early august
+** DONE dependent destroy 
+<2011-08-12 Fri>
+** DONE finish routing
+<2011-08-12 Fri>
+** DONE routing
+<2011-08-12 Fri>
+** DONE integrated view in tasks
+<2011-08-12 Fri>
+** DONE Time.now in controller
+* DONE <2011-08-13 Sat> allow for user to add timer from show, not edit
+* DONE what is a helper
+  CLOCK: [2011-08-14 Sun 08:51]--[2011-08-14 Sun 11:07] =>  2:16
+* DONE on new start, close last open
+* DONE clean up models
+  CLOCK: [2011-08-15 Mon 06:06]--[2011-08-15 Mon 06:20] =>  0:14
+  CLOCK: [2011-08-15 Mon 05:42]--[2011-08-15 Mon 06:00] =>  0:18
+* DONE update sorting in view
+  CLOCK: [2011-08-15 Mon 06:20]--[2011-08-15 Mon 06:22] =>  0:02
+* DONE show current open timer in timer index
+* DONE move start button out to index
+  CLOCK: [2011-08-15 Mon 06:23]--[2011-08-15 Mon 06:37] =>  0:14
+* DONE home screen
+* DONE clean up timer display time zone
+added in time clocks too!<2011-08-16 Tue>
+* DONE remove old models trash delete destroy!
+* DONE link tasks to users
+** starting other people's timers - plug this hole
+** user open tasks
+* DONE <2011-08-16 Tue> on create start a timer
+* DONE <2011-08-16 Tue> limited beta in the morning
+* DONE <2011-08-16 Tue> determine mvp for people to start beta testing
+** just starting and stopping basic timers is not useful, need to slice and dice basic analytics
+WE'LL DO IT LIVE!<2011-08-17 Wed>
+* DONE <2011-08-16 Tue> push to git hub
+not really needed until I get more people working on it... cross that bridge <2011-08-17 Wed>
+* DONE <2011-08-17 Wed> heroku migration is busted
+controller bug<2011-08-20 Sat>
+* DONE <2011-08-20 Sat> Clarify intent
+circle back on more feedback<2011-08-20 Sat>
+* DONE <2011-08-20 Sat> clearer UX
+first pass<2011-08-20 Sat>
+* DONE provide feedback mechanism
+blog post for now<2011-08-20 Sat>
+** DONE emails to me realistic version 1
+** reddit style dream state
+** tweets at me?
+* TODO <2011-08-20 Sat> fix clocks after the fact?
+* TODO <2011-08-20 Sat> cute branding with a robot and a blog
+** TODO <2011-08-20 Sat> this is a robot helping you track your time
+* TODO <2011-08-20 Sat> google around for other people that did this, buffet style steal ideas
+* TODO <2011-08-20 Sat> Elevate try it now
+** TODO "try it out"
+*** just try it out, create a temporary user that will be purged if yo
+*** plug in an email address and create a user
+*** use an email address
+*** try it out weekly cleanout to purge old tried accounts
+*** create a user with a random string password
+*** with a generated dictionary name
+* TODO <2011-08-20 Sat> Give day so far view up top
+* TODO <2011-08-20 Sat> Last 24
+* TODO <2011-08-20 Sat> Last week color bar
+* TODO <2011-08-20 Sat> Front page accordion video demo
+* TODO <2011-08-16 Tue> allow to create tasks without starting them - top form
+* TODO <2011-08-16 Tue> Annotate tasks - accomplished x
+** DONE <2011-08-16 Tue> add notes field
+** TODO add notes field to views
+*** show - each row
+*** edit - each row
+*** index - most recently checked out
+*** TODO <2011-08-17 Wed> clock controller is broken
+* TODO <2011-08-16 Tue> graceful bomb on someone accessing something they shouldn't
+* TODO <2011-08-16 Tue> determine method of ranking all tasks on front window besides most recent up top
+* TODO analytics
+** daily totals
+** weekly totals
+** unclocked time
+** graph time
+** allow a data dump
+** daily graph
+** weekly graph
+** compare to goals
+** TODO show total time next to each timer
+** TODO Link tasks - display them in chronological order with sliding effect
+** TODO tag tasks to collect them
+* TODO warn people on how long they've been doing something,
+** flash the browser window or do an alert?
+** TODO warn people on too long,
+** TODO clock to new, or "oh shit I forgot to clock out" mark that to unknown time
+* TODO merge with goals idea?
+* TODO mobile css
+* TODO <2011-08-16 Tue> link and categorize tasks
+* TODO <2011-08-16 Tue> edit user link up top
+* TODO <2011-08-16 Tue> View to revise timers that looks like google cal stretching back and forth
+* TODO <2011-08-16 Tue> Insert in middle of tasks
+* TODO <2011-08-16 Tue> Make modifying tasks and timers easy in case someone screws it up
+* TODO <2011-08-16 Tue> Integrate with g cal?
+* TODO <2011-08-16 Tue> Push idea of singletasking to reduce thrashing
+* TODO <2011-08-16 Tue> start with the idea of just recording high granularity time (work/pleasure/rest/misc)
+** TODO <2011-08-16 Tue> then move to phase2
+* TODO <2011-08-16 Tue> Pomodoro play chimes or low gongs and be seen next to the main clocks
+* TODO <2011-08-16 Tue> Personally keep track of tasks as you work on them. Rapid project management.
+* TODO <2011-08-16 Tue> model moderator views on top of users and groups
+* TODO <2011-08-17 Wed> tag on task end
+* TODO <2011-08-17 Wed> rename last clock if you got side tracked?
+* thoughts
+** sell to small businesses to help people track time on projects
+*** "you're spending a lot of time, on x, try to improve process"
+*** sales process?
+*** "how much time do you spend on value add activities?"
+*** how much time do you spend doing the things you value?
+*** this will help to find out those numbers so you can be more aware
+*** this is a tool for individuals or small businesses to track how much time they spend on things
+*** it can help you make decisions on how to change your time allocations
+*** it will generate meaningful reports and dashboards - LIVE
+*** you will be able to see what you've been doing for the last week, compare weeks
+*** you will be able to see what your people are clocking right now (creepy?)
+*** "a project management tool for the individual"
+*** compare to rescue time
+**** rescue time tracks usage on a computer, requires less diligence
+**** this tracks time on any task, requires diligence
+** aim is to minimize unknown time - show unknown time dash
+*** phase 1 - minimize unknown time
+*** phase 2 - set goals
+** bring to startup weekend looking for biz plan and cash and marketing
+** TODO <2011-08-18 Thu> simpleology, intro video reads like some super motivational bullshit
+** push to redeem coupon for free month, but free month still needs a credit card which will be charged 57$ after
+** no way to easily exit without evil backbutton
+** video to confirm email
+** top bar has how far you are
+** sounds way too close to scientology, feels like I'm being recruited for some weird lifestyle change and cult
+** stepping thru from confirmation to login was unclear
+** this looks like a very deliberate means for establishing a process around actually completing tasks
+** doesn't follow DMAIC, just tries to drop in a new process, I'm already dragging my heels on adoption.
+** much too much click thru already, i'm bored of this.
+** it also looks like I'm not going to have enough time this morning to try it out
+** I'll have to come back to it later
+** robot on okc, rescue time
+** 
+* recommend a password sentence - reference xkcd comic
+* 6 sigma your life
+** Define your day
+** Measure how much time you spend doing things
+** Improve your time usage to target your goals
+** Analyse the results - are you hitting targets
+** Control - keep an eye on things, DON'T LOSE SIGHT OF YOUR GOALS
+* TODO <2011-08-20 Sat> Agile your life. Set one project goal help thru agile process of backlog and burndown.
+* TODO <2011-08-20 Sat> Switch modes between assign task at start or start task mark at end.
+* TODO <2011-08-20 Sat> Clock only tags on finish not start.
+* TODO <2011-08-20 Sat> open id via warden
